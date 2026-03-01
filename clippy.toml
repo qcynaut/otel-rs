@@ -1,0 +1,93 @@
+# Clippy Configuration for Better Code Quality
+
+# Cognitive complexity threshold (default: 25)
+# Lower values enforce simpler functions
+cognitive-complexity-threshold = 15
+
+# Type complexity threshold (default: 250)
+# Warns about overly complex types
+type-complexity-threshold = 200
+
+# Maximum function lines (default: 100)
+too-many-lines-threshold = 80
+
+# Maximum arguments in a function (default: 7)
+too-many-arguments-threshold = 7
+
+# Single character binding names threshold
+# Allow single char names in closures/loops up to this many lines
+single-char-binding-names-threshold = 4
+
+# Minimum length for doc comments to avoid trivial docs
+doc-valid-idents = [
+    "GitHub",
+    "GitLab",
+    "JavaScript",
+    "TypeScript",
+    "WebAssembly",
+    "NaN",
+]
+
+# Literal representation improvements
+# Minimum digits for separators in large literals
+literal-representation-threshold = 10000
+
+# Vector initialization capacity threshold
+vec-box-size-threshold = 4096
+
+# Enforce semicolon placement
+semicolon-inside-block-ignore-singleline = true
+semicolon-outside-block-ignore-multiline = true
+
+# Allow certain uppercase acronyms in names
+allowed-duplicate-crates = []
+
+# Disallowed methods - add problematic methods here
+disallowed-methods = [
+    # Example: "std::env::set_var", # Prefer scoped alternatives
+]
+
+# Disallowed types - add problematic types here
+disallowed-types = [
+    # Example: "std::collections::LinkedList", # Usually Vec is better
+]
+
+# Disallowed names - variable names to avoid
+disallowed-names = ["foo", "bar", "baz", "quux"]
+
+# Allow expect and unwrap in tests
+allow-expect-in-tests = true
+allow-unwrap-in-tests = true
+
+# Allow print macros in certain contexts
+allow-print-in-tests = true
+
+# Suppress certain warnings for foreign code
+suppress-restriction-lint-in-const = false
+
+# Warn about missing documentation
+missing-docs-in-crate-items = false
+
+# Module inception (nested modules with same name)
+max-include-file-size = 1000000
+
+# Enum variant names threshold
+enum-variant-name-threshold = 3
+
+# Standard library imports to avoid
+disallowed-macros = []
+
+# Await holding locks threshold (in lines)
+large-error-threshold = 128
+
+# Array size threshold for passing by value vs reference
+pass-by-value-size-limit = 256
+
+# Trivial copy size limit
+trivial-copy-size-limit = 128
+
+# Maximum size for implementing Copy trait
+max-trait-bounds = 3
+
+# Excessive bools in function parameters
+max-fn-params-bools = 1

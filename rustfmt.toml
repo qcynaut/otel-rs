@@ -1,0 +1,81 @@
+# Rust Edition
+edition = "2024"
+
+# Maximum line width
+max_width = 100
+
+# Indentation
+hard_tabs = false
+tab_spaces = 4
+
+# Imports
+imports_granularity = "Crate"
+group_imports = "StdExternalCrate"
+reorder_imports = true
+
+# Functions
+fn_single_line = false
+fn_params_layout = "Tall"
+
+# Use small heuristics for better formatting decisions
+use_small_heuristics = "Default"
+
+# Trailing commas
+trailing_comma = "Vertical"
+trailing_semicolon = true
+
+# Match arms
+match_arm_blocks = true
+match_block_trailing_comma = false
+
+# Control flow
+control_brace_style = "AlwaysSameLine"
+
+# Comments and documentation
+wrap_comments = true
+comment_width = 80
+normalize_comments = true
+normalize_doc_attributes = true
+
+# Formatting style
+newline_style = "Auto"
+indent_style = "Block"
+
+# Struct and enum formatting
+struct_lit_single_line = true
+enum_discrim_align_threshold = 0
+
+# Arrays and slices
+array_width = 60
+chain_width = 60
+
+# Strings
+format_strings = false
+
+# Macro formatting
+format_macro_matchers = true
+format_macro_bodies = true
+
+# Code generation
+format_generated_files = true
+
+# Miscellaneous
+remove_nested_parens = true
+reorder_impl_items = false
+use_field_init_shorthand = true
+use_try_shorthand = true
+force_explicit_abi = true
+
+# Blank lines
+blank_lines_upper_bound = 1
+blank_lines_lower_bound = 0
+
+# Where clauses
+where_single_line = false
+
+# Overflow and wrapping
+overflow_delimited_expr = false
+condense_wildcard_suffixes = false
+
+# Edition-specific features
+unstable_features = false
