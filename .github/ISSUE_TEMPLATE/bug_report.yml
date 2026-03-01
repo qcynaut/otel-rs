@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the sections below.
+
+  - type: input
+    id: version
+    attributes:
+      label: otel-rs version
+      description: Which version of otel-rs are you using?
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: rust-version
+    attributes:
+      label: Rust version
+      description: Output of `rustc --version`
+      placeholder: "rustc 1.93.0 (xxx 2025-xx-xx)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: transport
+    attributes:
+      label: Transport
+      description: Which transport feature are you using?
+      options:
+        - gRPC (default)
+        - HTTP
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps or code snippet to reproduce the behavior.
+      render: rust
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened. Include any error messages or logs.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any other context (OS, collector version, feature flags, etc.).
+    validations:
+      required: false
