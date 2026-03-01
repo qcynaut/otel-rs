@@ -27,11 +27,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ## Installation
 
-Add as a git dependency in your `Cargo.toml`:
+Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-otel-rs = { git = "https://github.com/qcynaut/otel-rs.git" }
+otel-rs = "0.1"
 ```
 
 ### Feature Flags
@@ -48,7 +48,7 @@ To use HTTP instead of gRPC:
 
 ```toml
 [dependencies]
-otel-rs = { git = "...", default-features = false, features = ["tracing", "logs", "metrics", "http"] }
+otel-rs = { version = "0.1", default-features = false, features = ["tracing", "logs", "metrics", "http"] }
 ```
 
 ## Configuration

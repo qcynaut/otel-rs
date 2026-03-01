@@ -9,7 +9,7 @@ homepage = "https://github.com/qcynaut/otel-rs"
 license = "MIT OR Apache-2.0"
 keywords = ["opentelemetry", "tracing", "observability", "otlp", "metrics"]
 categories = ["development-tools::debugging", "development-tools::profiling"]
-rust-version = "1.85"
+rust-version = "1.93"
 
 [features]
 default = ["tracing", "logs", "metrics", "grpc"]
