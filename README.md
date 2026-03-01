@@ -1,5 +1,11 @@
 # otel-rs
 
+[![CI](https://github.com/qcynaut/otel-rs/actions/workflows/ci.yml/badge.svg)](https://github.com/qcynaut/otel-rs/actions/workflows/ci.yml)
+[![Crates.io](https://img.shields.io/crates/v/otel-rs.svg)](https://crates.io/crates/otel-rs)
+[![docs.rs](https://img.shields.io/docsrs/otel-rs)](https://docs.rs/otel-rs)
+[![Rust Version](https://img.shields.io/badge/rust-1.93%2B-orange.svg)](https://www.rust-lang.org)
+[![License](https://img.shields.io/crates/l/otel-rs.svg)](LICENSE-MIT)
+
 Modern, composable OpenTelemetry observability helpers for Rust.
 
 Provides a single `init()` call that sets up **traces**, **logs**, and **metrics** export via OTLP, with dynamic subscriber layer composition, feature-gated transport selection, standard OTel env var support, and async-aware shutdown.
