@@ -241,29 +241,6 @@ let filter = FilterBuilder::new()
 
 `RUST_LOG` takes full precedence when set.
 
-## Architecture
-
-```
-src/
-├── lib.rs          # OtelGuard, init_with_config(), re-exports
-├── config.rs       # Enums, sub-configs (Exporter/Tracing/Metrics), OtelConfigBuilder
-├── env.rs          # Standard OTel env var parsing
-├── filter.rs       # Allow-list EnvFilter building, FilterBuilder
-├── transport.rs    # Centralized exporter building, credential/TLS handling
-├── metrics.rs      # Thin Metrics wrapper (SdkMeterProvider + Meter)
-├── error.rs        # OtelError, OtelResult, ErrorContext trait
-├── span.rs         # SpanExt, InstrumentedResult, TimingContext
-└── macros.rs       # try_record!, try_record_return!
-```
-
-Key design decisions:
-
-- **Dynamic layer composition** — layers collected into `Vec<Box<dyn Layer>>` and applied in one `try_init()`, replacing the original 8-branch combinatorial if/else
-- **Composable sub-configs** — `ExporterConfig`, `TracingConfig`, `MetricsConfig` each with their own builder, composed into `OtelConfig`
-- **Centralized transport** — all exporter building and credential application in `transport.rs`, eliminating duplicated code across span/log/metric modules
-- **Feature-gated transports** — `grpc` and `http` are compile-time choices via cargo features
-- **Env var defaults** — standard OTel env vars parsed once, builder values override
-
 ## License
 
 Licensed under either of
